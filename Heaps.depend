@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1533644101 source:c:\users\rohit\documents\programming\heaps\main.cpp
+	<iostream>
+	"heap.h"
+	<string>
+	<cstdlib>
+
+1533457942 source:c:\users\rohit\documents\programming\heaps\bst.cpp
+	<iostream>
+	"bst.h"
+
+1533439423 c:\users\rohit\documents\programming\heaps\bst.h
+
+1533650408 c:\users\rohit\documents\programming\heaps\heap.h
+	<iostream>
+
