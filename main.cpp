@@ -12,15 +12,14 @@ int main()
 {
 //    test();
     heap h;
-    h.insert(28);
-    h.insert(29);
-    h.insert(30);
-    h.insert(9);
-    h.remove(28);
+//    h.insert(28);
+//    h.insert(29);
+//    h.insert(30);
+//    h.insert(9);
+//    h.remove(28);
     int q = 0;
     string input, next;
     string delimit = " ";
-    cout << 1/2;
     while(q == 0){
 
         cout << "prompt> ";
@@ -34,6 +33,8 @@ int main()
                     cout << "ERROR: Input is invalid"<< endl;
                 }
                 else{
+                    h.insert(val);
+                    cout << "Successfully inserted node with value " << val << endl;
 //                    if(binary.find(val) == 0){
 //                        cout << "ERROR: " << val << " is already added" << endl;
 //                    }
@@ -55,6 +56,13 @@ int main()
                     cout << "ERROR: Input is invalid" << endl;
                 }
                 else{
+                    int status = h.remove(val);
+                    if(status == 0){
+                        cout << val << " is removed" << endl;
+                    }
+                    else{
+                        cout << "ERROR: "<< val << " is not found" << endl;
+                    }
 //                    if(binary.find(val) == 0){
 ////                        binary.remove(val);
 //                        cout << val << " is removed" << endl;
@@ -79,7 +87,7 @@ int main()
 //                        cout << "LevelOrder Traversal" << endl;
 //                        cout << "   ";
                         h.levelOrder();
-//                        cout << endl;
+                        cout << endl;
 //                    }
             }
             else

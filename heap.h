@@ -82,7 +82,7 @@ int heap::insert(int item_i){
 //}
 
 int heap::remove(int item_i){
-    int left, right, i, temp, parentnode;
+    int left, right, i, temp, prevnode;
 
     for (i = 0; i < MAX; i++) {
         if (item_i == arr[i]->value_i)
@@ -94,8 +94,8 @@ int heap::remove(int item_i){
     }
     arr[i]->value_i = arr[size - 1]->value_i;
     size = size - 1;
-    parentnode =(i - 1) / 2; /*find parentnode of node i */
-    if (arr[i]->value_i > arr[parentnode]->value_i)
+    prevnode =(i - 1) / 2;
+    if (arr[i]->value_i > arr[prevnode]->value_i)
     {
         insert(arr[i]->value_i);
         return 0;
